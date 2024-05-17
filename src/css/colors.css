@@ -1,0 +1,55 @@
+/* Definimos las variables para el dark mode */
+:root{
+    --text-color: var(--dark-text-color);
+    --alternative-text-color: var(--white-text-color);
+    --dark-text-color: #0D0D0D;
+    --light-text-color: lightskyblue;
+    --white-text-color: rgb(241, 241, 241);
+    --primary-color: #e1701a;
+    --light-primary-color :orange;
+    --ascent-color: #f7a440;
+    --secundary-ascent-color: #fae6d1;
+    --secundary-color: #f9cf9e;
+    --header-color: var(--primary-color);
+    --background-color: #fff6ec;
+    --footer-color:#aaaaaa;
+    --background-elements-color: #ffffff;
+
+    --shadow-elements-color:gray;
+    --border-color: var(--text-color);
+    --acords-color: var(--dark-text-color) ;
+
+    --shadow-elemts: 2px 2px 5px var(--shadow-elements-color);
+    --border-elements: 1px solid var(--border-color);
+
+
+    /* Tiempo en segundos de las animaciones */
+    --change-color-animation-duration: 4s;
+    --move-bar-animation-duration: 2s;
+
+}
+
+/* Cambiamos los colores segun el darkmode del usuario */
+@media (prefers-color-scheme: dark) {
+    :root{
+    --text-color: rgba(255, 255, 255, 0.874);
+    --alternative-text-color:#0D0D0D;
+    --dark-text-color: var(--alternative-text-color);
+    --primary-color: #e1701a;
+    --light-primary-color: #e1701a;
+    --ascent-color: #f7a440;
+    --secundary-ascent-color: var(--footer-color);
+    --secundary-color: var(--background-elements-color);
+    --header-color: var(--footer-color);
+    --background-color: #0D0D0D;
+    --footer-color:#404040;
+    --background-elements-color: #A6A6A6;
+
+    --shadow-elements-color: none;
+    --border-color: var(--dark-text-color);
+    --acords-color : var(--light-text-color);
+
+    --shadow-elemts: 3px 3px 5px var(--shadow-elements-color);
+    --border-elements: 0;
+    }
+}

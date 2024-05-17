@@ -1,0 +1,17 @@
+.puntos-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-content: flex-start;
+    gap: 15px;
+}
+
+.puntos-imagen .punto{
+    font-size: 24px;
+    opacity: 30%;
+    
+}
+
+.puntos-imagen .punto:first-child {
+    opacity: 100%;
+}

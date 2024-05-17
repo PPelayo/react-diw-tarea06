@@ -1,0 +1,123 @@
+.icon-nav-hamburguesa{
+    background: url("../resources/Menu_Hamburguesa.png");
+    background-size: contain;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    border: 0;
+}
+
+.icon-submodding{
+    max-width: 48px;
+    max-height: 48px;
+    transition: transform .5s;
+
+}
+
+.icon-lupa{
+    background: url('../resources/Lupa.png');
+    background-size: contain;
+    background-repeat: round;
+    min-width: 36px;
+    min-height: 36px;
+}
+
+.icon-person{
+    background: url("../resources/user.png");
+    background-size: cover;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 32px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.icon-languaje{
+    background: url("../resources/Spain.png");
+    background-size: cover;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 32px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.icon-heart{
+    background: url("../resources/corazon.png");
+    background-size: cover;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.icon-cart{
+    background: url("../resources/carrito.png");
+    background-size: cover;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.icon-sony{
+    background: url("../resources/sony.png");
+    background-size: cover;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.icon-steam{
+    background: url("../resources/steam.png");
+    background-size: cover;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.icon-epicgames{
+    background: url("../resources/epic.png");
+    background-size: cover;
+    background-repeat: round;
+    min-width: 48px;
+    min-height: 48px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.path-abajo {
+    animation: mover 1s ease;
+
+} 
+
+.path-arriba {
+    animation: mover 1s ease;
+}
+
+
+.icon-submodding:hover {
+    /* animation: rotar 1s ease forwards alternate; */
+    transform: rotate(45deg);
+}
+
+
+
+/* .icon-submodding:not(:hover) {
+    animation: rotar 1s ease alternate forwards;
+} */
+
+@keyframes mover {
+    0% {
+        transform: translateY(-50%);
+    }
+    
+}

@@ -1,0 +1,308 @@
+main{
+    color: var(--text-color);
+    display: grid;
+}
+
+.grid {
+    grid-template: 
+    'header'
+    'main'
+    'sect-ads'
+    'footer';
+}
+
+.detail-grid{
+    display: grid;
+    grid-template:
+        'img info'
+        'about about'
+    ;
+
+    padding: 20px;
+    gap: 20px;
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-game-detail-sect{
+    grid-area: img;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.img-game-detail-sect img{
+    border-radius: 12px;
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+/****************************************/
+
+.info-game-detail-sect{
+    grid-area: info;
+    width: 100%;
+    height: max-content;
+    background-color: var(--secundary-ascent-color);
+    padding: 10px;
+    display: grid;
+    grid-template: 
+        'title fav-btn'
+        'disponivility disponivility'
+        'platforms platforms'
+        'price purchase'
+    ;
+
+    border-radius: 16px;
+    box-shadow: var(--shadow-elemts);
+    justify-self: center;
+    row-gap: 20px;
+}
+
+.title-game-detail{
+    grid-area: title;
+    font-size: 1.6rem;
+    text-shadow: var(--shadow-elemts);
+}
+
+.fav-btn{
+    grid-area: fav-btn;
+    width: 48px;
+    height: 48px;
+    justify-self: end;
+    transition: .3s transform;
+    cursor: pointer;
+}
+
+.fav-btn:hover{
+    transform: scale(1.075);
+}
+
+
+.disponivility-game-detail{
+    grid-area: disponivility;
+    font-size: 1.1rem;
+    font-style: italic;
+    align-self: center;
+}
+
+.platform-game-detail{
+    grid-area: platforms;
+    width: 100%;
+    height: 50px;
+    background-color: var(--secundary-color);
+    border-radius: 32px;
+    justify-self: start;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-game-detail a{
+    transition: .3s transform;
+}
+
+.platform-game-detail a:hover{
+    transform: scale(1.050);
+}
+
+.price-game-detail{
+    grid-area: price;
+    background-color: var(--background-elements-color);
+    text-shadow: var(--shadow-elemts);
+    border-radius: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: max-content;
+    padding: 10px;
+    justify-self: start;
+    align-self: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: var(--dark-text-color);
+}
+
+.price-total-game-detail{
+    text-decoration: line-through;
+}
+
+.discount-price-game-detail{
+    color: rgb(255, 106, 0);
+    font-weight: 800;
+    text-shadow: 2px 2px 5px black;
+}
+
+.price-final-game-detail{
+    font-size: 1.8rem;
+}
+
+.purchase{
+    grid-area: purchase;
+    align-self: center;
+    display: flex;
+    height: max-content;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}   
+
+.btn-purchase{
+    background-color: var(--ascent-color);
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-elemts);
+    min-height: 60px;
+    min-width: 60px;
+    transition: .3s transform;
+}
+
+.btn-purchase:hover{
+    transform:  scale(1.070);
+}
+
+
+.btn-cart-game-detail div.icon-cart{
+    min-height: 32px;
+    min-width: 32px;
+    width: 32px;
+    margin: auto;
+}
+
+.purchasenow-game-detail{
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/***************************************/
+
+.about-game-detail-sect{
+    grid-area: about;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.about-game-detail-sect h2{
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.about-game-detail-sect p {
+    text-align: justify;
+}
+
+
+.sect-ads{
+    justify-self: center;
+    align-self: flex-end;
+}
+
+.pulse {
+    box-shadow: 0 0 3px 4px var(--light-primary-color);
+    transform: scale(1);
+    animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+    0%, 100%{
+        transform: scale(1);
+        box-sizing: 0 0 3px 4px var(--light-primary-color);
+    }
+
+    50%{
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0px var(--light-primary-color);
+    }
+}
+
+
+/*************************RESPONSIVE************/
+
+@media (max-width: 900px) {
+    .info-game-detail-sect{
+        grid-template: 
+            'title fav-btn'
+            'disponivility disponivility'
+            'platforms platforms'
+            'price price'
+            'purchase purchase'
+        ;
+    }
+    .price-game-detail{
+        width: 100%;
+    }
+
+    .purchase{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .platform-game-detail{
+        flex-flow: wrap;
+        width: 100%;
+        height: max-content;
+    }
+}
+
+@media (max-width: 800px) {
+    .detail-grid{
+        grid-template:
+        'img'
+        'info'
+        'about'
+    ;
+    }
+
+    .info-game-detail-sect{
+        grid-template: 
+            'title fav-btn'
+            'disponivility disponivility'
+            'platforms platforms'
+            'price purchase'
+        ;
+        column-gap: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 475px) {
+
+    .detail-grid{
+        width: 100%;
+    }
+
+    .info-game-detail-sect{
+        grid-template: 
+        'title fav-btn'
+        'disponivility disponivility'
+        'platforms platforms'
+        'price price'
+        'purchase purchase'
+        ;
+    }
+
+    .img-game-detail-sect img {
+        width: 100%;
+    }
+
+    .purchase{
+        justify-content: space-evenly;
+    }
+}
+
+@media (width < 600px){
+    html{
+        font-size: 90%;
+    }
+}

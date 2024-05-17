@@ -1,0 +1,37 @@
+.main-about-us{
+    display: flex;
+    justify-content: start;
+    padding: 24px;
+    gap: 12px;
+}
+
+.title-about-us{
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+    transition: transform ease .4s;
+}
+
+.title-about-us:hover{
+    transform: scale(1.025);
+}
+
+.p-info{
+    max-width: 980px;
+    margin: 42px;
+    font-size: large;
+}
+
+.frames-container{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 10px;
+    flex-flow: row wrap;
+}
+
+@media (max-width: 600px){
+    iframe {
+        width: 350px;
+        height: 215px;
+    }
+}
