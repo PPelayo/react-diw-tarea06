@@ -3,13 +3,13 @@ import Header from "@/components/Header/Header";
 import { ReactNode } from "react";
 
 interface Props {
-    children: ReactNode
+  children: ReactNode;
 }
 function BasePage({ children }: Props) {
   return (
     <>
       <Header />
-        {children}
+      <main>{children}</main>
       <Footer />
     </>
   );
