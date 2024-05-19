@@ -51,6 +51,7 @@ function ScrollToTop() {
               fontSize: "16px",
               cursor: "pointer",
               padding: "8px",
+              zIndex: 1000,
               // padding: "px", // Ajusta el padding a cero para que la imagen ocupe todo el espacio del botón
             }}
           >

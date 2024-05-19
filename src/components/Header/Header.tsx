@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import "@/css/icons.css";
 import Person from "../logo/Person";
+import SubModdingIcon from "@res/logo-claro-opt.svg";
 
 function Header() {
   return (
@@ -17,15 +18,18 @@ function Header() {
         }}
       >
         <Container fluid className="d-flex gap-3 align-items-center">
-        <div className="d-flex align-items-center justify-content-between flex-grow-1">
+          <div className="d-flex align-items-center justify-content-between flex-grow-1">
             <Navbar.Brand className="link" href="/">
-              Sub-Modding
-            </Navbar.Brand>
-            <Nav.Item className="d-lg-none"> {/* Solo visible en pantallas pequeñas */}
-              <Person
-                css="col-auto link"
-                sty={{ width: "42px" }}
+              <img
+                src={SubModdingIcon}
+                alt="SubModding"
+                style={{ width: "42px" }}
               />
+            </Navbar.Brand>
+            <Nav.Item className="d-lg-none">
+              {" "}
+              {/* Solo visible en pantallas pequeñas */}
+              <Person css="col-auto link" sty={{ width: "42px" }} />
             </Nav.Item>
           </div>
           <Navbar.Toggle className="link" aria-controls="navbarScroll" />
@@ -44,49 +48,23 @@ function Header() {
             </Form>
 
             <Nav
-              // className="my-2 my-lg-0"
               className=""
               navbarScroll
             >
-              <Nav.Link className="link" href="#action1">
-                Juegos
+              <Nav.Link className="link pages-nav" href="#action1">
+                <h4 className="transition">Juegos</h4>
               </Nav.Link>
-              <Nav.Link className="link" href="#action2">
-                Merchandasing
+              <Nav.Link className="link pages-nav" href="#action2">
+                <h4 className="transition">Merchandasing</h4>
               </Nav.Link>
-              <Nav.Item className="d-none d-lg-flex"> {/* Oculto en pantallas pequeñas */}
-                <Person
-                  css="col-auto link"
-                  sty={{ width: "42px" }}
-                />
+              <Nav.Item className="d-none d-lg-flex">
+                {/* Oculto en pantallas pequeñas */}
+                <Person css="col-auto link" sty={{ width: "42px" }} />
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      {/* <header>
-        <nav className="header-nav">
-          <button className="icon-nav-hamburguesa">Menu de opciones</button>
-        </nav>
-        <section className="main-header-sect">
-          <section className="search-sect">
-            <input type="text" name="search" placeholder="Buscar..." />
-            <span className="icon-lupa"></span>
-          </section>
-
-          <nav className="pages-nav">
-            <a href="./pages/merchandasing.html">MERCHANDASING</a>
-            <a href="./pages/games.html">JUEGOS</a>
-          </nav>
-
-          <nav className="config-header-nav">
-            <button className="icon-person">Menu de opciones personales</button>
-            <button className="icon-cart"></button>
-            <button className="icon-languaje">Cambio de idioma</button>
-          </nav>
-        </section>
-      </header> */}
     </>
   );
 }

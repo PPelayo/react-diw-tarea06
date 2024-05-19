@@ -58,8 +58,8 @@
     background: url("../resources/carrito.png");
     background-size: cover;
     background-repeat: round;
-    min-width: 48px;
-    min-height: 48px;
+    width: 48px;
+    height: 48px;
     box-sizing: border-box;
     border: 0;
 }

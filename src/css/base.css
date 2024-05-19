@@ -102,7 +102,7 @@ button.icon-nav-hamburguesa{
         margin-right: 10px;
     }
 
-    .pages-nav > a{
+    .pages-nav > .transition{
         text-decoration: none;
         font-weight: 700;
         font-size: 1.3rem;
@@ -110,7 +110,7 @@ button.icon-nav-hamburguesa{
         transition: font-size 0.5s;
     }
 
-    .pages-nav > a:hover{
+    .pages-nav > .transition:hover{
         font-size: 1.35rem;
         text-decoration:underline;
     }
