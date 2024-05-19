@@ -14,6 +14,8 @@ import NotImplemented from "./pages/notImplemented";
 import { Provider } from "react-redux";
 import {store} from "./redux/store";
 import CartPage from "./pages/CartPage";
+import AboutUsPage from "./pages/AboutUs";
+import MerchandasingPage from "./pages/MerchandasingPage";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="/" element={<Index />} />
             <Route path="/NotImplemented" element={<NotImplemented />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/merchandasing" element={<MerchandasingPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>

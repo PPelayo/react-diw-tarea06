@@ -47,10 +47,10 @@ function Header() {
             </Form>
 
             <Nav className="" navbarScroll>
-              <Nav.Link className="link pages-nav" href="#action1">
+              <Nav.Link className="link pages-nav" href="/notImplemented">
                 <h4 className="transition">Juegos</h4>
               </Nav.Link>
-              <Nav.Link className="link pages-nav" href="#action2">
+              <Nav.Link className="link pages-nav" href="/merchandasing">
                 <h4 className="transition">Merchandasing</h4>
               </Nav.Link>
               <Nav.Item className="d-none d-lg-flex">

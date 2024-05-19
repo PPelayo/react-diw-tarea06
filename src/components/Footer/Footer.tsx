@@ -6,7 +6,7 @@ function Footer() {
       </article>
       <article className="footer-text">
         <span>
-          <a className="about-us" href="./pages/about-us.html">
+          <a className="about-us" href="/about-us">
             Sobre nosotros
           </a>
         </span>

@@ -3,7 +3,8 @@ import CartIcon from "../icons/CartIcon";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { Offcanvas } from "react-bootstrap";
-import "@/css/cart.css"
+import "@/css/cart-header.css"
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const items = useSelector(cartSelector);
@@ -26,6 +27,9 @@ function Cart() {
   };
 
   const handleClose = () => setShowCart(false);
+
+  const navigation = useNavigate();
+  const handleGoToCart = () => navigation("/cart")
 
   return (
     <>
@@ -86,7 +90,7 @@ function Cart() {
           }}>
             <h3>Carrito</h3>
 
-            <button className="go-to-cart">
+            <button className="go-to-cart" onClick={handleGoToCart}>
               Ir al Carrito
             </button>
           </div>
@@ -103,7 +107,7 @@ function Cart() {
           >
             <ul>
               {items.map((item) => (
-                <li
+                <li className="cart-item"
                   key={item.id}
                   style={{
                     display: "flex",

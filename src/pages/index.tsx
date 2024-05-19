@@ -24,17 +24,17 @@ function Index() {
       id: "2",
       title : "Spider-Man: Miles Morales",
       descripcion : "",
-      price : 22.99,
+      price : 59.99,
       img : miles460,
-      discount : 20
+      discount : 0
     },
     {
       id : "3",
       title : "ARK: Survival Evolved",
       descripcion : "",
-      price : 22.99,
+      price : 32.99,
       img : arkImg,
-      discount : 20
+      discount : 15
     }
   ]
 
