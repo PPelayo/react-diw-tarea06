@@ -1,8 +1,7 @@
 import "@/css/section-games.css";
 import "@/css/icons.css";
 import CartButton from "@/components/Buttons/CartButton";
-import { useDispatch } from "react-redux";
-import { addItem } from "@/redux/cardSlice";
+import useAddGameToCard from "@/hooks/useAddGameToCard";
 
 interface Props {
   route : string,
@@ -10,11 +9,11 @@ interface Props {
 }
 
 function GameCard({game, route}: Props) {
-  const dispatch = useDispatch();
 
+  const addGameToCard = useAddGameToCard();
 
   const handleAddCard = () => {
-    dispatch(addItem(game));
+    addGameToCard(game)
   }
 
   return (
@@ -37,6 +36,7 @@ function GameCard({game, route}: Props) {
     </>
   );
 }
+
 
 export default GameCard;
 

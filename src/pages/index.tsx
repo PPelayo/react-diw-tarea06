@@ -13,6 +13,7 @@ function Index() {
 
   const favGames : Array<Game> = [
     {
+      id: "1",
       title : "GTA V",
       descripcion : "Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto desarrollado por la compañía británica Rockstar North y distribuido por Rockstar Games.",
       price : 22.99,
@@ -20,6 +21,7 @@ function Index() {
       discount : 20
     },
     {
+      id: "2",
       title : "Spider-Man: Miles Morales",
       descripcion : "",
       price : 22.99,
@@ -27,6 +29,7 @@ function Index() {
       discount : 20
     },
     {
+      id : "3",
       title : "ARK: Survival Evolved",
       descripcion : "",
       price : 22.99,

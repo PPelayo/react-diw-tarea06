@@ -13,6 +13,7 @@ import {
 import NotImplemented from "./pages/notImplemented";
 import { Provider } from "react-redux";
 import {store} from "./redux/store";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/NotImplemented" element={<NotImplemented />} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>
