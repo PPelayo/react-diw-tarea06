@@ -10,6 +10,31 @@ import ScrollToTopButton from "@/components/Buttons/ScrollToTopButton";
 import MainCarousel from "@/components/Carousel/Carousel";
 import BasePage from "./BasePage";
 function Index() {
+
+  const favGames : Array<Game> = [
+    {
+      title : "GTA V",
+      descripcion : "Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto desarrollado por la compañía británica Rockstar North y distribuido por Rockstar Games.",
+      price : 22.99,
+      img : gta460,
+      discount : 20
+    },
+    {
+      title : "Spider-Man: Miles Morales",
+      descripcion : "",
+      price : 22.99,
+      img : miles460,
+      discount : 20
+    },
+    {
+      title : "ARK: Survival Evolved",
+      descripcion : "",
+      price : 22.99,
+      img : arkImg,
+      discount : 20
+    }
+  ]
+
   return (
     <>
       <BasePage>
@@ -44,29 +69,9 @@ function Index() {
               <h2>Ofertas</h2>
             </div>
             <section className="body-games-sect">
-              <GameCard
-                title="GTA V"
-                route="./notImplemented"
-                img={gta460}
-                price={22.99}
-                discount={20}
-              />
-
-              <GameCard
-                title="Spider-Man: Miles Morales"
-                img={miles460}
-                price={50.99}
-                discount={10}
-                route="./notImplemented"
-              />
-
-              <GameCard
-                title="ARK: Survival Evolved"
-                img={arkImg}
-                price={40.99}
-                discount={10}
-                route="./notImplemented"
-              />
+              {favGames.map((game, index) => (
+                <GameCard key={index} game={game} route="/notImplemented" />
+              ))}
             </section>
           </section>
         </main>

@@ -5,8 +5,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 import "@/css/icons.css";
-import Person from "../logo/Person";
+import Person from "../icons/Person";
 import SubModdingIcon from "@res/logo-claro-opt.svg";
+import Cart from "../Cart/Cart";
 
 function Header() {
   return (
@@ -27,9 +28,7 @@ function Header() {
               />
             </Navbar.Brand>
             <Nav.Item className="d-lg-none">
-              {" "}
-              {/* Solo visible en pantallas pequeñas */}
-              <Person css="col-auto link" sty={{ width: "42px" }} />
+              <IconsFixeds />
             </Nav.Item>
           </div>
           <Navbar.Toggle className="link" aria-controls="navbarScroll" />
@@ -47,10 +46,7 @@ function Header() {
               <Button variant="outline-success">Search</Button>
             </Form>
 
-            <Nav
-              className=""
-              navbarScroll
-            >
+            <Nav className="" navbarScroll>
               <Nav.Link className="link pages-nav" href="#action1">
                 <h4 className="transition">Juegos</h4>
               </Nav.Link>
@@ -58,8 +54,7 @@ function Header() {
                 <h4 className="transition">Merchandasing</h4>
               </Nav.Link>
               <Nav.Item className="d-none d-lg-flex">
-                {/* Oculto en pantallas pequeñas */}
-                <Person css="col-auto link" sty={{ width: "42px" }} />
+                <IconsFixeds />
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
@@ -67,6 +62,17 @@ function Header() {
       </Navbar>
     </>
   );
+}
+
+function IconsFixeds() {
+  return (
+    <>
+      <div className="d-flex align-items-center justify-content-between">
+        <Person css="col-auto link" sty={{ width: "42px" }} />
+        <Cart />
+      </div>
+    </>
+  )
 }
 
 export default Header;

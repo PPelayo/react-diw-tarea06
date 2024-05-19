@@ -1,33 +1,37 @@
 import "@/css/section-games.css";
 import "@/css/icons.css";
 import CartButton from "@/components/Buttons/CartButton";
+import { useDispatch } from "react-redux";
+import { addItem } from "@/redux/cardSlice";
 
 interface Props {
-  title: string;
-  price: number;
-  discount: number;
-  img: string;
-  route: string;
+  route : string,
+  game : Game,
 }
 
-function GameCard(props: Props) {
+function GameCard({game, route}: Props) {
+  const dispatch = useDispatch();
+
+
+  const handleAddCard = () => {
+    dispatch(addItem(game));
+  }
+
   return (
     <>
       <article className="game-article">
-        <a className="aside-info-game img-info-game" href={props.route}>
+        <a className="aside-info-game img-info-game" href={route}>
           <div className="img-info-game">
-            {/* <a className="aside-info-game" href={props.route}> */}
-            <img src={props.img} alt={props.title} />
-            <span className="info-game info-game-precio">{props.price}€</span>
+            <img src={game.img} alt={game.title} />
+            <span className="info-game info-game-precio">{game.price}€</span>
             <span className="info-game info-game-descuento">
-              {props.discount}%
+              {game.discount === 0 ? "" : game.discount + "%"}
             </span>
-            {/* </a> */}
           </div>
         </a>
         <div className="title-game">
-            <h3>{props.title}</h3>
-            <CartButton onClick={() => {}}/>
+            <h3>{game.title}</h3>
+            <CartButton onClick={handleAddCard}/>
           </div>
       </article>
     </>
@@ -35,3 +39,4 @@ function GameCard(props: Props) {
 }
 
 export default GameCard;
+

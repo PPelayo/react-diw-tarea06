@@ -1,4 +1,4 @@
-import carrito from "@res/carrito.png";
+import CartIcon from "../icons/CartIcon";
 
 interface Props {
   onClick: () => void;
@@ -14,15 +14,11 @@ function CartButton({ onClick }: Props) {
         backgroundColor: "var(--secundary-color)",
       }}
     >
-      <img
-        src={carrito}
-        alt="Agregar al carrito"
-        style={{
-          width: "42px",
-          height: "42px",
-          objectFit: "cover",
-        }}
-      />
+      <CartIcon sty={{
+        width: "3rem",
+        height: "3rem",
+  
+      }}/>
     </button>
   );
 }
