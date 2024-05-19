@@ -5,6 +5,7 @@ import arkImg from "@res/ark.jpg";
 import gta460 from "@res/gtav-460.png";
 import gta1080 from "@res/gta-v1080.png";
 import miles460 from "@res/miles-morales460.png";
+import ScrollToTopButton from "@/components/Buttons/ScrollToTopButton";
 
 function Index() {
   return (
@@ -60,6 +61,7 @@ function Index() {
           </section>
         </section>
       </main>
+      <ScrollToTopButton />
     </>
   );
 }

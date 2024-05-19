@@ -1,5 +1,7 @@
 @import './colors.css';
-html{
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -124,6 +126,11 @@ button.icon-nav-hamburguesa{
     .config-header-nav button{
         font-size: 0;
     }
+
+.link {
+    color : var(--text-color); 
+    fill: var(--text-color);
+}
 
 /*******************MAIN********************/
     

@@ -1,104 +1,73 @@
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+
+import "@/css/icons.css";
+import Person from "../logo/Person";
 
 function Header() {
-return(
-        <>
-            <header>
+  return (
+    <>
+      <Navbar
+        expand="lg"
+        style={{
+          backgroundColor: "var(--header-color)",
+        }}
+      >
+        <Container fluid className="d-flex gap-3 align-items-center">
+        <div className="d-flex align-items-center justify-content-between flex-grow-1">
+            <Navbar.Brand className="link" href="/">
+              Sub-Modding
+            </Navbar.Brand>
+            <Nav.Item className="d-lg-none"> {/* Solo visible en pantallas pequeñas */}
+              <Person
+                css="col-auto link"
+                sty={{ width: "42px" }}
+              />
+            </Nav.Item>
+          </div>
+          <Navbar.Toggle className="link" aria-controls="navbarScroll" />
+          <Navbar.Collapse
+            id="navbarScroll"
+            className="justify-content-between"
+          >
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+
+            <Nav
+              // className="my-2 my-lg-0"
+              className=""
+              navbarScroll
+            >
+              <Nav.Link className="link" href="#action1">
+                Juegos
+              </Nav.Link>
+              <Nav.Link className="link" href="#action2">
+                Merchandasing
+              </Nav.Link>
+              <Nav.Item className="d-none d-lg-flex"> {/* Oculto en pantallas pequeñas */}
+                <Person
+                  css="col-auto link"
+                  sty={{ width: "42px" }}
+                />
+              </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      {/* <header>
         <nav className="header-nav">
           <button className="icon-nav-hamburguesa">Menu de opciones</button>
-          <a href="index.html" title="Icono Submodding">
-            <svg
-              className="icon-submodding"
-              width="182.46mm"
-              height="199.7mm"
-              version="1.1"
-              viewBox="0 0 182.46 199.7"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <g transform="translate(-15.476 -12.806)">
-                <g stroke-linecap="round" stroke-linejoin="round">
-                  <g>
-                    <path
-                      className="path-abajo"
-                      transform="scale(.26458)"
-                      d="m253.3 640.88c-82.42-80.574-156.43-152.98-164.47-160.91l-14.612-14.416 34.581-33.986 4.6836 4.1667c2.576 2.2917 68.301 66.38 146.06 142.42 131.25 128.36 141.62 138.27 144.91 138.52 3.4916 0.26413 5.3885-1.5415 147.99-140.88l144.46-141.15 3.9479 3.5284c2.1713 1.9406 10.008 9.3487 17.415 16.462l13.467 12.934-6.6994 6.6177c-36.142 35.701-320.84 313.26-321.29 313.23-0.323-0.0232-68.021-65.966-150.44-146.54z"
-                      fill="#f7a440"
-                      stroke="#000"
-                      stroke-width="11.602"
-                      style="paint-order: stroke fill markers"
-                    />
-                    <path
-                      className="path-arriba"
-                      transform="scale(.26458)"
-                      d="m549.82 275.53c-80.966-77.305-148-140.81-148.97-141.11-0.96879-0.30749-2.6668-0.22346-3.7733 0.18671-1.6914 0.62699-106.21 101.64-253.55 245.03l-34.444 33.523-34.054-34.175 161.81-157.08c88.997-86.394 162.25-157.22 162.78-157.4 0.98419-0.32807 332.25 315.43 332.25 316.69 0 0.37941-7.838 8.3852-17.418 17.791l-17.418 17.101z"
-                      fill="#e1701a"
-                      stroke="#000"
-                      stroke-width="11.602"
-                      style="paint-order: stroke fill markers"
-                    />
-                    <text
-                      transform="scale(.81081 1.2333)"
-                      x="58.471195"
-                      y="98.800148"
-                      fill="#000000"
-                      font-family="'Bauhaus 93'"
-                      font-size="22.866px"
-                      stroke="#ffffff"
-                      stroke-width="6.05"
-                      style="
-                        font-variant-caps: normal;
-                        font-variant-east-asian: normal;
-                        font-variant-ligatures: normal;
-                        font-variant-numeric: normal;
-                        paint-order: stroke fill markers;
-                      "
-                      xml:space="preserve"
-                    >
-                      <tspan
-                        x="58.471195"
-                        y="98.800148"
-                        style="
-                          font-variant-caps: normal;
-                          font-variant-east-asian: normal;
-                          font-variant-ligatures: normal;
-                          font-variant-numeric: normal;
-                        "
-                      >
-                        SUB MODDING
-                      </tspan>
-                      <tspan
-                        x="58.471195"
-                        y="127.38264"
-                        style="
-                          font-variant-caps: normal;
-                          font-variant-east-asian: normal;
-                          font-variant-ligatures: normal;
-                          font-variant-numeric: normal;
-                        "
-                      />
-                    </text>
-                  </g>
-                  <g
-                    transform="translate(2.3022 27.37)"
-                    fill="none"
-                    stroke-width="3.175"
-                  >
-                    <path
-                      d="m14.99 72.971 88.506-85.948 90.553 86.46-89.274 87.227z"
-                      stroke="#020100"
-                      style="paint-order: stroke fill markers"
-                    />
-                    <path
-                      d="m14.761 95.804 88.506-85.948 90.553 86.46-89.274 87.227z"
-                      stroke="#000"
-                      style="paint-order: stroke fill markers"
-                    />
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </a>
         </nav>
         <section className="main-header-sect">
           <section className="search-sect">
@@ -117,9 +86,9 @@ return(
             <button className="icon-languaje">Cambio de idioma</button>
           </nav>
         </section>
-      </header>
-        </>
-    )
+      </header> */}
+    </>
+  );
 }
 
 export default Header;
