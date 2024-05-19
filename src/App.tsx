@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <Router>
+        <Router basename={import.meta.env.DEV ? '/' : 'react-diw-tarea06'}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/NotImplemented" element={<NotImplemented />} />
